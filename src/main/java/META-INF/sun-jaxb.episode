@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" if-exists="true" version="2.1">
+      
+    <!--
+
+Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.0 
+Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2022.06.07 a las 08:49:24 AM COT 
+
+  -->
+      
+    <bindings xmlns:tns="http://spring.io/guides/gs-producing-web-service" if-exists="true" scd="x-schema::tns">
+            
+        <schemaBindings map="false">
+                  
+            <package name="com.firma.interfaz.stub"/>
+                
+        </schemaBindings>
+            
+        <bindings if-exists="true" scd="tns:getUserRequest">
+                  
+            <class ref="com.firma.interfaz.stub.GetUserRequest"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="tns:getUserResponse">
+                  
+            <class ref="com.firma.interfaz.stub.GetUserResponse"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:User">
+                  
+            <class ref="com.firma.interfaz.stub.User"/>
+                
+        </bindings>
+          
+    </bindings>
+    
+</bindings>
