@@ -6,11 +6,11 @@
 Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.0 
 Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-Generado el: 2022.06.07 a las 08:49:24 AM COT 
+Generado el: 2022.06.08 a las 12:08:38 AM COT 
 
   -->
       
-    <bindings xmlns:tns="http://spring.io/guides/gs-producing-web-service" if-exists="true" scd="x-schema::tns">
+    <bindings xmlns:tns="http://tempuri.org/" if-exists="true" scd="x-schema::tns">
             
         <schemaBindings map="false">
                   
@@ -18,21 +18,21 @@ Generado el: 2022.06.07 a las 08:49:24 AM COT
                 
         </schemaBindings>
             
-        <bindings if-exists="true" scd="tns:getUserRequest">
+        <bindings if-exists="true" scd="tns:GetProfile">
                   
-            <class ref="com.firma.interfaz.stub.GetUserRequest"/>
+            <class ref="com.firma.interfaz.stub.GetProfile"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="tns:getUserResponse">
+        <bindings if-exists="true" scd="tns:GetProfileResponse">
                   
-            <class ref="com.firma.interfaz.stub.GetUserResponse"/>
+            <class ref="com.firma.interfaz.stub.GetProfileResponse"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:User">
+        <bindings if-exists="true" scd="~tns:Profile">
                   
-            <class ref="com.firma.interfaz.stub.User"/>
+            <class ref="com.firma.interfaz.stub.Profile"/>
                 
         </bindings>
           

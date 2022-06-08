@@ -9,12 +9,6 @@ import java.util.Map;
 
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
-
-import java.util.HashMap;
-import java.util.Map;
-
-import org.springframework.stereotype.Component;
-
 import io.spring.guides.gs_producing_web_service.User;
 
 /**
@@ -38,6 +32,7 @@ public class UserRepository {
 	}
 
 	public User findUser(int id) {
+		initData();
 		Assert.notNull(id, "The country's name must not be null");
 		return users.get(id);
 	}

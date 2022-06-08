@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import com.firma.interfaz.http.SoapClient;
-import com.firma.interfaz.stub.GetUserResponse;
+import com.firma.interfaz.stub.GetProfile;
+import com.firma.interfaz.stub.GetProfileResponse;
 import com.firma.interfaz.stub.ObjectFactory;
+
 /**
  * @author Marcos
  *
@@ -26,14 +28,16 @@ public class RestControllerApi {
 	private SoapClient soapClient;
 	
 	@GetMapping
-	public GetUserResponse sum(@RequestParam String code) {
+	public GetProfileResponse sum(@RequestParam int id) {
 	ObjectFactory objectFactory = new ObjectFactory();
-	GetUserResponse user = new GetUserResponse();
-//	user.se.setBlz(code);
-//	// BlzServiceAdapter blzServiceAdapter=new BlzServiceAdapter();
-//
-//	GetBankResponseType response = soapClient.getBank("http://www.thomas-bayer.com/axis2/services/BLZService",
-//	objectFactory.createGetBank(type));
+	GetProfile request = new GetProfile();
+	request.setId(id);
+//	request.setId(id);
+////	user.se.setBlz(code);
+////	// BlzServiceAdapter blzServiceAdapter=new BlzServiceAdapter();
+////
+//	GetUserResponse response = soapClient.getUser("http://www.thomas-bayer.com/axis2/services/BLZService",
+//	objectFactory.createGetUserRequest(request));
 	return null;//response.getDetails();
 	}
 }

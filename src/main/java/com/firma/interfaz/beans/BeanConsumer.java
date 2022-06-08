@@ -19,7 +19,7 @@ public class BeanConsumer {
 	@Bean
 	public SoapClient soapConnector(Jaxb2Marshaller marshaller) {
 		SoapClient client = new SoapClient();
-		client.setDefaultUri("http://localhost:8080/ws/users.wsdl");
+		client.setDefaultUri("https://interface-y6bebo7xta-uc.a.run.app/tUNderProfilesWS.asmx");
 		client.setMarshaller(marshaller);
 		client.setUnmarshaller(marshaller);
 		return client;

@@ -10,6 +10,7 @@ import com.firma.interfaz.repositories.*;
 import io.spring.guides.gs_producing_web_service.GetUserRequest;
 import io.spring.guides.gs_producing_web_service.GetUserResponse;
 
+
 @Endpoint
 public class UserService {
 
@@ -22,7 +23,7 @@ public class UserService {
 		this.userRepository = userRepository;
 	}
 
-	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "getCountryRequest")
+	@PayloadRoot(namespace = NAMESPACE_URI, localPart = "getUserRequest")
 	@ResponsePayload
 	
 	public GetUserResponse getUser(@RequestPayload GetUserRequest request) {
