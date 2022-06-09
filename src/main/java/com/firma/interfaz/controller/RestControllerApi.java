@@ -29,16 +29,11 @@ public class RestControllerApi {
 	private SoapClient soapClient;
 	
 	@GetMapping
-	public Profile sum(@RequestParam int id) {
-	ObjectFactory objectFactory = new ObjectFactory();
-	GetProfile request = new GetProfile();
-	request.setId(id);
-//	request.setId(id);
-////	user.se.setBlz(code);
-////	// BlzServiceAdapter blzServiceAdapter=new BlzServiceAdapter();
-////
-	GetProfileResponse response = soapClient.getProfile("https://interface-y6bebo7xta-uc.a.run.app/tUNderProfilesWS.asmx",
-			request);
-	return response.getGetProfileResult();
+	public GetProfileResponse sum(@RequestParam int id) {
+
+
+	GetProfileResponse response = soapClient.getProfile("https://interface-y6bebo7xta-uc.a.run.app/tUNderProfilesWS.asmx", id);
+
+	return response;//response.getDetails();
 	}
 }

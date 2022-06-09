@@ -9,8 +9,10 @@ import javax.xml.bind.JAXBElement;
 
 public class SoapClient extends WebServiceGatewaySupport {
 
-	public GetProfileResponse getProfile(String url, Object request) {
-		JAXBElement res = (JAXBElement) getWebServiceTemplate().marshalSendAndReceive(url, request);
-		return (GetProfileResponse) res.getValue();
+	public GetProfileResponse getProfile(String url, int id) {
+		GetProfile request = new GetProfile();
+		request.setId(id);
+		GetProfileResponse response = (GetProfileResponse)getWebServiceTemplate().marshalSendAndReceive(url, request);
+		return  response;
 	}
 }
