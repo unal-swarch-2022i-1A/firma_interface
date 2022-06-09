@@ -31,7 +31,7 @@ public class RestControllerApi {
 	public GetProfileResponse sum(@RequestParam int id) {
 
 
-	GetProfileResponse response = soapClient.getProfile("http://interface-y6bebo7xta-uc.a.run.app/tUNderProfilesWS.asmx", id);
+	GetProfileResponse response = soapClient.getProfile("https://interface-y6bebo7xta-uc.a.run.app/tUNderProfilesWS.asmx", id);
 
 	return response;//response.getDetails();
 	}
